@@ -6,7 +6,7 @@ type person struct {
 	age  uint
 	name string
 }
-
+ 
 func (p *person) setAge(newAge uint) {
 	p.age = newAge
 }
