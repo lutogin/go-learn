@@ -40,6 +40,15 @@ func Factorial(n uint) uint {
 	return n * Factorial(n-1)
 }
 
+func FactorialChannel(n int, ch chan<- int) {
+	var result int = 1
+	for i := 1; i <= n; i++ {
+		result *= i
+	}
+
+	ch <- result
+}
+
 func Fibo(n uint) uint {
 	if n == 0 {
 		return 0
@@ -58,4 +67,13 @@ func Devide(a uint, b uint) float32 {
 	}
 
 	return float32(a) / float32(b)
+}
+
+func createChan(n int) <-chan int {
+	ch := make(chan int) // создаем канал
+	go func() {
+		ch <- n // отправляем данные в канал запускаем горутину
+	}()
+
+	return ch // возвращаем канал
 }
