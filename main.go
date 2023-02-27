@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	cahannels.Run()
+	cahannels.RunStream()
 }

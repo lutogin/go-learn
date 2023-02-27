@@ -37,6 +37,14 @@ func Run() {
 	fmt.Println(<-chInt3)
 	fmt.Println(<-chInt3)
 
+	close(chInt3) // close the channel
+
+	if val, opened := <-chInt3; opened { // possible IF
+		fmt.Println(val)
+	} else {
+		fmt.Println("Channel closed!")
+	}
+
 	//var inCh chan<- int  // channel only for sending
 	//var outCh <-chan int // channel only for receiving
 

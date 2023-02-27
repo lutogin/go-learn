@@ -49,6 +49,26 @@ func FactorialChannel(n int, ch chan<- int) {
 	ch <- result
 }
 
+func FactorialWithStruct(n int, ch chan<- struct{}, results map[int]int) {
+	defer close(ch) // close tha channel in the end of the function
+
+	var result int = 1
+	for i := 1; i <= n; i++ {
+		result *= i
+		results[i] = result
+	}
+}
+
+func FactorialSteam(n int, ch chan int) {
+	defer close(ch)
+	result := 1
+	for i := 1; i <= n; i++ {
+		result *= i
+		ch <- result // send every result
+	}
+
+}
+
 func Fibo(n uint) uint {
 	if n == 0 {
 		return 0
