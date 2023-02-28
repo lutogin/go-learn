@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "go build go-learn",
+            "type": "go",
+            "goExecPath": "/usr/local/go/bin/go",
+            "buildParams": ["go-learn"],
+        },
+    ]
+}

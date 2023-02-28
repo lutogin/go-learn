@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-learn/basic/cahannels"
+	"go-learn/basic/io-learn"
 )
 
 func main() {
-	cahannels.RunWaitGroup()
+	io_learn.RunWrite()
 }
