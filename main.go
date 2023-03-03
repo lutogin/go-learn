@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-learn/basic/io-learn"
+	"go-learn/basic/io-files"
 )
 
 func main() {
-	io_learn.RunWrite()
+	io_files.RunFormattingOut()
 }
