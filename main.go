@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	network_learn.RunListener()
+	network_learn.RunServer()
 }
