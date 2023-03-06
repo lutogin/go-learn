@@ -1,9 +1,9 @@
 package main
 
 import (
-	http_module "go-learn/basic/http-module"
+	"go-learn/basic/db"
 )
 
 func main() {
-	http_module.RunDoRequest()
+	db.RunMongo()
 }
