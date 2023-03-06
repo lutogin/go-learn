@@ -1,9 +1,9 @@
 package main
 
 import (
-	network_learn "go-learn/basic/network-learn"
+	http_module "go-learn/basic/http-module"
 )
 
 func main() {
-	network_learn.RunServer()
+	http_module.RunDoRequest()
 }
