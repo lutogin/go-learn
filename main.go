@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-learn/basic/db"
+	gorilla_server "go-learn/web-go/gorilla-server"
 )
 
 func main() {
-	db.RunMongo()
+	gorilla_server.Run()
 }
