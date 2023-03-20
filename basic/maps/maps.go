@@ -55,5 +55,8 @@ func Run() {
 	fmt.Println(mapWithAny)
 
 	p := map[string]Point{} // map[string]Point{} === make(map[string]Point) it's initializing.
+
+	p["a"] = Point{11, 22}
+	p["b"] = Point{4, 1}
 	fmt.Println(p)
 }
