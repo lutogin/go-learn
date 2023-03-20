@@ -2,6 +2,20 @@ package pointers
 
 import "fmt"
 
+type Point struct {
+	X, Y int
+}
+
+func (p Point) Move(x int, y int) {
+	p.X = x
+	p.Y = y
+}
+
+func MovePnt(p *Point, x int, y int) {
+	p.X = x
+	p.Y = y
+}
+
 func Run() {
 	var p *int
 	n := 10
@@ -27,4 +41,9 @@ func Run() {
 	testPointer(&zxc)
 
 	fmt.Println(zxc)
+
+	point := Point{1, 3}
+	fmt.Sprintln(point)
+	MovePnt(&point, 2, 4)
+	fmt.Sprintln(point)
 }
