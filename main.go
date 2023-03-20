@@ -1,9 +1,9 @@
 package main
 
 import (
-	gorilla_server "go-learn/web-go/gorilla-server"
+	"go-learn/basic/pointers"
 )
 
 func main() {
-	gorilla_server.Run()
+	pointers.Run()
 }

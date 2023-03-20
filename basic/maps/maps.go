@@ -2,6 +2,11 @@ package maps
 
 import "fmt"
 
+type Point struct {
+	X int
+	Y int
+}
+
 func Run() {
 	fmt.Println("Map")
 	var map1 = map[string]string{
@@ -48,4 +53,7 @@ func Run() {
 	mapWithAny["num"] = 12
 
 	fmt.Println(mapWithAny)
+
+	p := map[string]Point{} // map[string]Point{} === make(map[string]Point) it's initializing.
+	fmt.Println(p)
 }

@@ -6,12 +6,12 @@ type Point struct {
 	X, Y int
 }
 
-func (p Point) Move(x int, y int) {
+func (p *Point) Move(x int, y int) {
 	p.X = x
 	p.Y = y
 }
 
-func MovePnt(p *Point, x int, y int) {
+func MovePtr(p *Point, x int, y int) {
 	p.X = x
 	p.Y = y
 }
@@ -43,7 +43,8 @@ func Run() {
 	fmt.Println(zxc)
 
 	point := Point{1, 3}
-	fmt.Sprintln(point)
-	MovePnt(&point, 2, 4)
-	fmt.Sprintln(point)
+	fmt.Println(point)
+	//MovePtr(&point, 2, 4)
+	point.Move(2, 4)
+	fmt.Println(point)
 }
