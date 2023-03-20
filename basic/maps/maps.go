@@ -41,7 +41,7 @@ func Run() {
 
 	delete(people, "Tom") // remove
 
-	if _, ok := people["Tom"]; ok {
+	if _, ok := people["Tom"]; ok { // checking on existing key in map
 		fmt.Println("Checked key at MAP after deleting, result: ", ok)
 	} else {
 		fmt.Println("Key is deleted.")
@@ -59,4 +59,5 @@ func Run() {
 	p["a"] = Point{11, 22}
 	p["b"] = Point{4, 1}
 	fmt.Println(p)
+
 }
