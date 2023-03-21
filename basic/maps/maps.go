@@ -1,10 +1,11 @@
 package maps
 
 import "fmt"
+import "github.com/mitchellh/mapstructure"
 
 type Point struct {
-	X int
-	Y int
+	X int `mapstructure:"x"`
+	Y int `mapstructure:"y"`
 }
 
 func Run() {
@@ -59,5 +60,17 @@ func Run() {
 	p["a"] = Point{11, 22}
 	p["b"] = Point{4, 1}
 	fmt.Println(p)
+
+	// decode map to struct
+	mapToStruct := map[string]int{
+		"x": 1,
+		"y": 2,
+	}
+
+	p1 := Point{}
+
+	mapstructure.Decode(mapToStruct, &p1)
+
+	fmt.Printf("Decode map to struct result: %s", p1)
 
 }
