@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type Vehicle interface {
+type IVehicle interface {
 	move(distance uint)
 }
 
@@ -20,7 +20,7 @@ func (a Aircraft) move(d uint) {
 	fmt.Println("Aircraft is flying. Distance: ", d)
 }
 
-func drive(v Vehicle, distance uint) {
+func drive(v IVehicle, distance uint) {
 	v.move(distance)
 }
 
@@ -76,8 +76,8 @@ func (f *Folder) close() {
 }
 
 func Run() {
-	var c1 Vehicle = Car{}
-	var a1 Vehicle = Aircraft{}
+	var c1 IVehicle = Car{}
+	var a1 IVehicle = Aircraft{}
 	c1.move(3)
 	a1.move(10)
 

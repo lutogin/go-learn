@@ -1,9 +1,9 @@
 package main
 
 import (
-	"go-learn/basic/pointers"
+	type_assertions "go-learn/basic/type-assertions"
 )
 
 func main() {
-	pointers.Run()
+	type_assertions.Run()
 }
