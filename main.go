@@ -1,9 +1,9 @@
 package main
 
 import (
-	type_assertions "go-learn/basic/type-assertions"
+	go_routines "go-learn/basic/go-routines"
 )
 
 func main() {
-	type_assertions.Run()
+	go_routines.RunAsyncCalc()
 }

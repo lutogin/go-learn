@@ -1,4 +1,4 @@
-package cahannels
+package cahannels_with_goroutines
 
 import (
 	"fmt"

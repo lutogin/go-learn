@@ -1,4 +1,4 @@
-package cahannels
+package cahannels_with_goroutines
 
 import (
 	"fmt"
@@ -37,7 +37,7 @@ func Run() {
 	fmt.Println(<-chInt3)
 	fmt.Println(<-chInt3)
 
-	close(chInt3) // close the channel
+	close(chInt3) // close the channel!!! Important for streaming
 
 	if val, opened := <-chInt3; opened { // possible IF
 		fmt.Println(val)
