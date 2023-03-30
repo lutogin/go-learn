@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	go_routines.RunAsyncCalc()
+	go_routines.RunMutex()
 }
