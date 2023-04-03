@@ -1,9 +1,9 @@
 package main
 
 import (
-	go_routines "go-learn/basic/go-routines"
+	context_lern "go-learn/basic/context-lern"
 )
 
 func main() {
-	go_routines.RunMutex()
+	context_lern.Run()
 }
