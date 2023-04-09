@@ -1,9 +1,9 @@
 package main
 
 import (
-	context_lern "go-learn/basic/context-lern"
+	json_lern "go-learn/basic/json-lern"
 )
 
 func main() {
-	context_lern.Run()
+	json_lern.RunGson()
 }
