@@ -1,9 +1,9 @@
 package main
 
 import (
-	json_lern "go-learn/basic/json-lern"
+	"go-learn/basic/generic"
 )
 
 func main() {
-	json_lern.RunGson()
+	generic.RunGeneric()
 }
