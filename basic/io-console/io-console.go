@@ -1,6 +1,7 @@
 package io_console
 
 import (
+	"bufio"
 	"fmt"
 	"os"
 )
@@ -15,4 +16,10 @@ func Run() {
 	fmt.Scan(&age)
 
 	fmt.Println(name, age)
+
+	fmt.Print("Enter a expression splits by `,`: ") // for getting all string
+	in := bufio.NewReader(os.Stdin)                 // read all string from console
+	exps, err := in.ReadString('\n')
+
+	fmt.Println(exps, err)
 }
