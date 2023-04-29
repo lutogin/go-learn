@@ -21,5 +21,8 @@ func Run() {
 	in := bufio.NewReader(os.Stdin)                 // read all string from console
 	exps, err := in.ReadString('\n')
 
+	// Remove the newline character at the end of the input
+	exps = exps[:len(exps)-1]
+
 	fmt.Println(exps, err)
 }
